@@ -11,14 +11,12 @@ class compressURL:
 
     def shrinkURL(self, url):
         print(url)
-        m = hashlib.md5()
-        m.update(url)
-        m.digest
-        print(m)
-        # print(md5.new(URL).digest())
-        # return base64.b64encode(md5.new(url).digest()[-4:]).replace('=','').replace('/','_')
-
-
+        m = hashlib.md5(str(url).encode('utf-8'))
+        m.digest()[-4:]
+        return m
+    
+    def Shorten(self, url):
+        code = self.shrinkURL(url)
 
 def main():
     obj = compressURL()
