@@ -23,6 +23,12 @@ class compressURL:
             return {'success':True, 'url':url, 'code':code, 'shorturl': config.URL_PREFIX + code}
         except:
             return {'success':False}
+    
+    def lookup(self, code):
+        try:
+            return self.redis.get(config.REDIS_PREFIX + code)
+        except:
+            return None
 
 def main():
     obj = compressURL()
