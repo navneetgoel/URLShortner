@@ -28,11 +28,3 @@ class compressURL:
             return self.redis.get(config.REDIS_PREFIX + code)
         except:
             return None
-
-def main():
-    obj = compressURL()
-    print("Hello")
-    print(obj.shrinkURL("http://www.google.com"))
-
-if __name__ == "__main__":
-    main()
