@@ -19,7 +19,7 @@ class compressURL:
 
         try:
             self.redis.set(config.REDIS_PREFIX + code,  url)
-            return {'success':True, 'url':url, 'code':code, 'shorturl': config.URL_PREFIX + code}
+            return {'success':True, 'url':url, 'code':code, 'shorturl':config.URL_PREFIX + code}
         except:
             return {'success':False}
     
