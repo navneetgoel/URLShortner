@@ -1,5 +1,5 @@
 import logging
-from flask import Flask, json, request, redirect, render_template,make_response
+from flask import Flask, json, request, redirect, render_template, make_response
 from compressURL import compressURL
 from functools import wraps
 from bernhard import Client
