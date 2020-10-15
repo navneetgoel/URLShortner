@@ -80,3 +80,5 @@ def shorten_url():
     else:
         logger.info("Invalid Shortner Request")
         return redirect('/400')
+
+logger.info("End of Process")
