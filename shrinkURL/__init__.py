@@ -1,6 +1,6 @@
 import logging
 from flask import Flask, json, request, redirect, render_template, make_response
-from compressURL import compressURL
+from .compressURL import compressURL
 from functools import wraps
 from bernhard import Client
 from riemann_wrapper import riemann_wrapper
@@ -79,6 +79,4 @@ def shorten_url():
 
     else:
         logger.info("Invalid Shortner Request")
-        return redirect('/400')
-
-logger.info("End of Process")
+        return redirect('/400') 

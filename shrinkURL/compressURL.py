@@ -1,7 +1,7 @@
 import redis
 import base64
 import hashlib
-import config
+from . import config
 import sys
 
 class compressURL:
